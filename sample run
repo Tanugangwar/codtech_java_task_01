@@ -1,0 +1,48 @@
+=== File Handling Utility ===
+
+Choose an option:
+1. Write to file
+2. Read from file
+3. Modify file
+4. Exit
+> 1
+Enter text to write:
+Hello, this is the first line in the file.
+File written successfully.
+
+Choose an option:
+1. Write to file
+2. Read from file
+3. Modify file
+4. Exit
+> 2
+Contents of the file:
+Hello, this is the first line in the file.
+
+Choose an option:
+1. Write to file
+2. Read from file
+3. Modify file
+4. Exit
+> 3
+Enter new content to append:
+This is an appended line.
+File modified successfully.
+
+Choose an option:
+1. Write to file
+2. Read from file
+3. Modify file
+4. Exit
+> 2
+Contents of the file:
+Hello, this is the first line in the file.
+This is an appended line.
+
+Choose an option:
+1. Write to file
+2. Read from file
+3. Modify file
+4. Exit
+> 4
+Exiting...
