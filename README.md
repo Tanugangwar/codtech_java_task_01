@@ -1,26 +1,39 @@
-# CODTECH Internship Task-1: File Handling Utility
+# 🚀 CODTECH Internship Task-1: File Handling Utility
 
-## Objective
-To create a Java utility that demonstrates file handling operations—reading, writing, and modifying text files.
+Welcome to the first task of the **CODTECH Java Internship Program**!  
+This project showcases a simple yet powerful **Java-based File Handling Utility** that demonstrates reading, writing, and modifying text files via a command-line interface.
 
-## Features
-- Read from a text file.
-- Write user input to a file.
-- Append content to an existing file.
-- Simple console-based menu interface.
+---
 
-## How to Run
-1. **Compile**:  
-   `javac Main.java`
+## 🎯 Objective
+To design and implement a Java utility that performs the following file operations with ease:
+- 📄 Read content from a file
+- ✍️ Write user input to a file
+- 🛠️ Modify (append) data to an existing file
 
-2. **Run**:  
-   `java Main`
+This task will strengthen your understanding of **Java I/O streams** and **file management** through practical coding experience.
 
-## Files Included
-- `Main.java` – Core Java program
-- `README.md` – Project documentation
-- `LICENSE` – Open-source license file
-- `.gitignore` – Git ignore rules
+---
 
-## Output Example
-# codtech_java_task_01
+## ✨ Features
+- ✅ User-friendly console-based menu
+- 🧾 Read content from any `.txt` file
+- 📝 Write or overwrite content into the file
+- ➕ Append new content without removing existing data
+- 💡 Error handling for smoother execution
+
+---
+
+## 🧑‍💻 How to Run
+
+Make sure you have **Java (JDK 8 or higher)** installed.
+
+### 🔧 Compile the Program
+```bash
+javac Main.java
+
+▶️ Run the Program
+bash
+Copy
+Edit
+java Main
