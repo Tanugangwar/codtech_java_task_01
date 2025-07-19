@@ -1,0 +1,72 @@
+import java.io.*;
+import java.util.Scanner;
+
+public class Main {
+    private static final String FILE_NAME = "sample.txt";
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("=== File Handling Utility ===");
+        while (true) {
+            System.out.println("\nChoose an option:");
+            System.out.println("1. Write to file");
+            System.out.println("2. Read from file");
+            System.out.println("3. Modify file");
+            System.out.println("4. Exit");
+
+            int choice = scanner.nextInt();
+            scanner.nextLine();  // consume newline
+
+            switch (choice) {
+                case 1:
+                    writeToFile(scanner);
+                    break;
+                case 2:
+                    readFromFile();
+                    break;
+                case 3:
+                    modifyFile(scanner);
+                    break;
+                case 4:
+                    System.out.println("Exiting...");
+                    return;
+                default:
+                    System.out.println("Invalid option. Try again.");
+            }
+        }
+    }
+
+    private static void writeToFile(Scanner scanner) {
+        System.out.println("Enter text to write:");
+        String text = scanner.nextLine();
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(FILE_NAME))) {
+            writer.write(text);
+            System.out.println("File written successfully.");
+        } catch (IOException e) {
+            System.out.println("Error writing file: " + e.getMessage());
+        }
+    }
+
+    private static void readFromFile() {
+        try (BufferedReader reader = new BufferedReader(new FileReader(FILE_NAME))) {
+            System.out.println("Contents of the file:");
+            String line;
+            while ((line = reader.readLine()) != null)
+                System.out.println(line);
+        } catch (IOException e) {
+            System.out.println("Error reading file: " + e.getMessage());
+        }
+    }
+
+    private static void modifyFile(Scanner scanner) {
+        System.out.println("Enter new content to append:");
+        String text = scanner.nextLine();
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(FILE_NAME, true))) {
+            writer.newLine();
+            writer.write(text);
+            System.out.println("File modified successfully.");
+        } catch (IOException e) {
+            System.out.println("Error modifying file: " + e.getMessage());
+        }
+    }
+}
